@@ -12,9 +12,8 @@ This block runs the `cowsay` WebAssembly module compiled with WASI support and o
 
 ##  Usage
 
-## Run once with default message
-For local testing with Docker, execute the following:
-
+### Local testing
+Build with Docker: `docker build -t wasi-balena .` then execute like so:
 ```bash
 
 docker run --rm wasi-balena
@@ -29,7 +28,17 @@ docker run --rm wasi-balena
                 ||     ||
 ```
 
-## Override message and cowfile
+#### Override message and cowfile
 ```bash
 docker run --rm -e MESSAGE="Your WASI code goes here!" -e COW="dragon" wasi-balena
+```
+### Usage as balena block
+To use this block in your own `docker-compose.yml`, add the following:
+
+```yaml
+wasi-cowsay:
+  image: bh.cr/gh_billz/wasi-cowsay
+  environment:
+    MESSAGE: "WebAssembly on balena rocks!"
+    COW: tux
 ```
