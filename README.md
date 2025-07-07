@@ -8,12 +8,13 @@ This block runs the `cowsay` WebAssembly module compiled with WASI support and o
 
 - WASI runtime via [Wasmer](https://wasmer.io/)
 - Runs `cowsay.wasm` with optional cowfiles
-- Message passed via `MESSAGE` environment variable
-- Includes `balena.yml` for deployment on [balenaHub](https://hub.balena.io/)
+- Customize output via `MESSAGE` and `COW` environment variables
 
 ##  Usage
 
 ## Run once with default message
+For local testing with Docker, execute the following:
+
 ```bash
 
 docker run --rm wasi-balena
