@@ -4,16 +4,12 @@ A minimal [balena block](https://www.balena.io/blog/introducing-balenaBlocks/) t
 
 This block runs the `cowsay` WebAssembly module compiled with WASI support and outputs configurable messages to the terminal. Compatible with 64-bit Raspberry Pi and other aarch64 devices.
 
----
-
 ## Features
 
 - WASI runtime via [Wasmer](https://wasmer.io/)
 - Runs `cowsay.wasm` with optional cowfiles
 - Message passed via `MESSAGE` environment variable
 - Includes `balena.yml` for deployment on [balenaHub](https://hub.balena.io/)
-
----
 
 ##  Usage
 
