@@ -13,10 +13,26 @@ This block runs the `cowsay` WebAssembly module compiled with WASI support and o
 
 ##  Usage
 
+## Run once with default message
 ```bash
-# Run once with default message
+
 docker run --rm wasi-balena
+🐄 Running wasmer cowsay...
+ __________________________
+< Hello from balena block! >
+ --------------------------
+   \
+    \
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+```
 
-# Override message and cowfile
+## Override message and cowfile
+```bash
 docker run --rm -e MESSAGE="Your WASI code goes here!" -e COW="dragon" wasi-balena
-
+```
