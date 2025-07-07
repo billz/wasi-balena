@@ -2,7 +2,7 @@
 set -e
 
 MESSAGE="${MESSAGE:-Hello from balena block!}"
-COW="${COW:-tux}"
+COW="${COW:-default}"
 
 echo "🐄 Running wasmer cowsay..."
 wasmer run /app/cowsay.wasm -- -f "$COW" "$MESSAGE"
